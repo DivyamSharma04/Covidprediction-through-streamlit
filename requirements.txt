@@ -1,7 +1,6 @@
 joblib==0.16.0
 Keras==2.4.3
 matplotlib==3.2.2
-numpy==1.19.0
 os-sys==2.1.4
 andas==1.0.5
 Pillow==7.2.0
