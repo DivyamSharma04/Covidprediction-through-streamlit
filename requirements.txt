@@ -1,7 +1,6 @@
 joblib==0.16.0
 Keras==2.4.3
 os-sys==2.1.4
-andas==1.0.5
 Pillow==7.2.0
 streamlit==0.62.1
 gunicorn==19.9.0
