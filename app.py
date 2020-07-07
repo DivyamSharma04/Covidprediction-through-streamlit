@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-import numpy as np
 from keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import img_to_array
 from keras.models import load_model
@@ -9,7 +8,6 @@ import numpy as np
 import keras.backend.tensorflow_backend as tb
 tb._SYMBOLIC_SCOPE.value = True
 import joblib
-import cv2
 
 def load_prediction_model(model_files):
 	loaded_model = joblib.load(open(os.path.join(model_files),"rb"))
@@ -51,7 +49,6 @@ if st.button("Predict"):
 
 	preds = predictor.predict_classes(x)
 	preds= np.array_str(preds)
-	preds = preds.replace('[','').replace(']','')
 		
 	if preds == '0':
 		preds = 'Please visit nearby covid centre , it seems you have symptoms'
